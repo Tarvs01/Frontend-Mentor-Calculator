@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
+
+  <title>Calculator</title>
+</head>
+
+<body class="body-state-one">
+  <div class="main-cont">
+    <div class="top">
+      <span class="calc text-state-one">calc</span>
+      <span class="theme text-state-one">THEME</span>
+      <div class="overall-cont">
+        <div class="numbers text-state-one">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+        <div class="toggle-cont">
+         <span class="toggle" id="one" onclick="changeTheme(this)"></span>
+         <span class="toggle" id="two" onclick="changeTheme(this)"></span>
+         <span class="toggle" id="three" onclick="changeTheme(this)"></span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="display display-state-one"><p class="text text-state-one">0</p></div>
+    <div class="keypad keypad-state-one">
+      <button class="button button-state-one" onclick="writeDisplay(this)">7</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">8</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">9</button>
+      <button class="button reset-del-state-one" onclick="sliceDisplay()">DEL</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">4</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">5</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">6</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">+</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">1</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">2</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">3</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">-</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">.</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">0</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">/</button>
+      <button class="button button-state-one" onclick="writeDisplay(this)">*</button>
+      <button class="button reset-del-state-one two-width" onclick="clearDisplay()">RESET</button>
+      <button class="button equals equals-state-one two-width" onclick="equals()">=</button>
+    </div>
+  </div>
+
+  <script>
+    let a = document.querySelector(".display").clientHeight;
+    document.querySelector(".text").style.lineHeight = `${a}px`;
+  </script>
+</body>
+
+</html>
