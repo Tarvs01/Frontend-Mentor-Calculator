@@ -170,10 +170,19 @@ body {
   border: none;
   font-size: 27px;
   font-weight: 700;
+  margin: 2px;
   margin-bottom: 0.5em;
   font-family: spartan-bold, sans-serif;
+  display: block;
 }
 
+@media screen and (max-width: 300px) {
+  .button {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-size: 20px !important;
+  }
+}
 .button-state-one {
   border-bottom: 3px solid hsl(28deg, 16%, 65%);
   color: hsl(221deg, 14%, 31%);
